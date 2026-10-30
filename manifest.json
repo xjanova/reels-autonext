@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Reels Auto Next (FB + TikTok)",
+  "version": "3.0.0",
+  "description": "เลื่อนไปคลิปถัดไปอัตโนมัติเมื่อเล่นจบ ข้ามโฆษณา และแบนช่องที่ไม่ต้องการ — Facebook Reels & TikTok",
+  "permissions": ["storage"],
+  "action": { "default_popup": "popup.html", "default_title": "Reels Auto Next" },
+  "content_scripts": [{
+    "matches": [
+      "https://www.facebook.com/*", "https://web.facebook.com/*", "https://m.facebook.com/*",
+      "https://www.tiktok.com/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}
